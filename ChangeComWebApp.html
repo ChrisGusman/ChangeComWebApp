@@ -1,0 +1,283 @@
+# ChangeComWebApp
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<script type="text/javascript">
+</script>
+<div class = "container">
+	<!--
+	<div class = "row" id = "promptForm">
+		<hr>
+		<!--Schneider Logo
+		Change Communication
+		<button type = "button" id = "previousTwoButton" class = "glyphicon glyphicon-step-backward"></button>
+		<button type = "button" id = "previousButton" class = "glyphicon glyphicon-triangle-left"></button>
+		<button type = "button" id = "forwardButton" class = "glyphicon glyphicon-triangle-right"></button>
+		<button type = "button" id = "forwardTwoButton" class = "glyphicon glyphicon-step-forward"></button>
+	</div>
+	<div class = "row">
+		<hr>
+		<div class = "col-md-12" id = "promptsForm">
+			<button type = "button" id = "queryButton">Query</button>
+			<select id = "allInput">
+				<option value = "all">All</option>
+				<option value = "option2">Option 2</option>
+				<option value = "option3">Option 3</option>
+			</select>
+			<select id = "byPromptsInput">
+				<option value = "byPrompts">By Prompts</option>
+				<option value = "option2">Option 2</option>
+				<option value = "option2">Option 3</option>
+			</select>
+			Go live
+			<select id = "goLiveDateInput">
+				<option value = "date">Date</option>
+				<option value = "option2">Option 2</option>
+				<option value = "option3">Option 3</option>
+			</select>
+			<input type = "text" id = "goLiveTextBox">
+			Change Status:
+			<select id = "changeStatusInput">
+				<option value = "WIP">WIP</option>
+				<option value = "warranty">Warranty</option>
+				<option value = "complete">Complete</option>
+			</select>
+			Approved:
+			<select id = "approvedInput">
+				<option value = "no">NO</option>
+				<option value = "yes">YES</option>
+			</select>
+			Application:
+			<select id = "applicationInput">
+				<option value = "option1">Option 1</option>
+				<option value = "option2">Option 2</option>
+				<option value = "option3">Option 3</option>
+			</select>
+			Scheduled Move:
+			<select id = "scheduledMoveInput">
+				<option value = "option1">Option 1</option>
+				<option value = "option2">Option 2</option>
+				<option value = "option3">Option 3</option>
+			</select>
+			Change Owner:
+			<select id = "changeOwnerInput">
+				<option value = "option1">Option 1</option>
+				<option value = "option2">Option 2</option>
+				<option value = "option3">Option 3</option>
+			</select>
+			<button type = "button" id = "meButton">Me</button>
+			Change Com ID: <input type = "text" id = "changeComIDTextBox">
+		</div>
+	</div>
+	<div class = "row" id = "overallForm">
+		<hr>
+		<div class = "col-md-2">
+			Change Status: * <input type = "text" id = "changeStatusTextBox">
+		</div>
+		<div class = "col-md-2">
+			Outage: 
+			<select id = "outageInput">
+				<option value = "no">NO</option>
+				<option value = "yes">YES</option>
+			</select>
+		</div>
+		<div class = "col-md-2">
+			Approved?<input type = "text" id = "approvedTextBox">
+		</div>
+		<div class = "col-md-2">
+			<button type = "button" id = "moveToWarrantyButton">Move to Warranty</button>
+			<button type = "button" id = "movetoCompleteButton">Move to Complete</button>
+		</div>
+		<div class = "col-md-2">
+			Record Status: 
+			<span id = "recordStatusText">
+				<b>Read Only</b>
+			</span>
+		</div>
+	</div>
+	-->
+	<div class = "row">
+		<div class = "col-md-6">
+			<h4>Change Overview</h4>
+		</div>
+		<div class = "col-md-6">
+			<h4>Change Owner, Review, and Turnover</h4>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-6">
+			<div class = "input-group">
+				<span class = "input-group-addon">Changed Object Name: *</span>
+				<input type = "text" class = "form-control" id = "changedObjectNameTextBox">
+			</div>
+		</div>
+		<div class = "col-md-6">
+			<div class = "input-group">
+				<span class = "input-group-addon">Primary Owner:</span>
+				<input type = "text" class = "form-control" id = "primaryOwnerTextBox">
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-6">
+			<div class = "input-group">
+				<span class = "input-group-addon">Change Description: *</span>
+				<input type = "text" class = "form-control" id = "changeDescriptionTextBox">
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-6">
+			<div class = "input-group">
+				<span class = "input-group-addon">Change Justification: *</span>
+				<input type = "text" class = "form-control" id = "changeJustificationTextBox">
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-6">
+			<div class = "input-group">	
+				<span class = "input-group-addon">Project Name: *</span> 
+				<input type = "text" class = "form-control" id = "projectNameTextBox">
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-2">
+			<div class = "dropdown">
+				<button class = "btn btn-default dropdown-toggle" type = "button" data-toggle = "dropdown" aria-haspopup="true" aria-expanded="true" id = "applicationInput">
+					Application:
+					<span class="caret"></span>
+				</button>
+				<ul class = "dropdown-menu" aria-labelledby = "dropdownMenu1">
+					<li><a href = #>Option 1</a></li>
+					<li><a href = #>Option 2</a></li>
+					<li><a href = #>Option 3</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class = "col-md-2">
+			<div class = "dropdown">
+				<button class = "btn btn-default dropdown-toggle" type = "button" data-toggle = "dropdown" aria-haspopup="true" aria-expanded="true" id = "scheduledMoveInput">
+					Scheduled Move:
+					<span class="caret"></span>
+				</button>
+				<ul class = "dropdown-menu" aria-labelledby = "dropdownMenu1">
+					<li><a href = #>Option 1</a></li>
+					<li><a href = #>Option 2</a></li>
+					<li><a href = #>Option 3</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-2">
+			1st Implementation Date: * 
+		</div>
+		<div class = "col-md-6">
+			<input type = "date" id = "1stImplementationDateTextBox">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-2">
+			Deployment Group: *
+		</div>
+		<div class = "col-md-6">
+			<select id = "deploymentGroupInput">
+				<option value = "option1">Option 1</option>
+				<option value = "option2">Option 2</option>
+				<option value = "option3">Option 3</option>
+			</select>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-2">
+			Change Ticket: 
+		</div>
+		<div class = "col-md-6">
+			<input type = "text" id = "changeTicketTextBox">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-2">
+			ODI Emergency Group:
+		</div>
+		<div class = "col-md-6">
+			<select id = "odiEmergencyGroupInput">
+				<option value = "option1">Option 1</option>
+				<option value = "option2">Option 2</option>
+				<option value = "option3">Option 3</option>
+			</select>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-2">
+			Anthill Build Life: 
+		</div>
+		<div class = "col-md-6">
+			<input type = "text" id = "anthillBuildLifeTextBox">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-2">
+			Retirement Related?
+		</div>
+		<div class = "col-md-6">
+			<select id = "retirementRelatedInput">
+				<option value = "yes">YES</option>
+				<option value = "no">NO</option>
+			</select>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-2">
+			Business Contact(s): 
+		</div>
+		<div class = "col-md-6">
+			<input type = "text" id = "businessContractTextBox">
+		</div>
+	</div>
+	<div class = "col-md" id = "changeOwnerForm">
+		
+		Secondary Owner:
+		<select id = "secondaryOwnerInput">
+			<option value = "option1">Option 1</option>
+			<option value = "option2">Option 2</option>
+			<option value = "option3">Option 3</option>
+		</select>
+		Peer Reviewer:
+		<select id = "peerReviewerInput">
+			<option value = "option1">Option 1</option>
+			<option value = "option2">Option 2</option>
+			<option value = "option3">Option 3</option>
+		</select>
+		Peer Review Date: <input type = "date" id = "peerReviewDatePicker">
+		L2 Turnover Person: 
+		<select id = "l2TurnoverPersonInput">
+			<option value = "option1">Option 1</option>
+			<option value = "option2">Option 2</option>
+			<option value = "option3">Option 3</option>
+		</select>
+		L2 Turnover Date: <input type = "date" id = "l2TurnoverDatePicker">
+	</div>
+	<div id = "oracleSystemForm">
+		Change Com ID: <input type = "text" id = "changeComeIDTextBox">
+		Parent ID: <input type = "text" id = "parentIDTextBox">
+		Insert User: <input type = "text" id = "insertUserTextBox">
+		Insert Date Time: <input type = "date" id = "insertDateTimePicker">
+		Update User: <input type = "text" id = "updateUserTextBox">
+		Update Date Time: <input type = "date" id = "updateDateTimePicker">
+	</div>
+<div id = "codeContetionForm">
+	Contention ID's: <input type = "text" id = "contentionIDsTextBox">
+</div>
+<div id = "relatedJobsForm">
+	CA Jobs/Schedules: <input type = "text" id = "relatedJobsSchedulesTextBox">
+</div>
+</div>
+</body>
+</html>
